@@ -52,5 +52,72 @@ pipeline {
                     docker run -d --name fastapi-prod -p 80:8000 \\
                         -e SECRET_KEY=prod \\
                         ${IMAGE}
+                """
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ Deployed ${IMAGE} to port 80"
+        }
+        failure {
+            echo "❌ Build failed — check logs"
+        }
+    }
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
